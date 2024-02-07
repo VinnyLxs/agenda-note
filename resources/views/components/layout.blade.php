@@ -24,6 +24,9 @@
                     <li class="nav-item">
                     <a class="nav-link" href="../consultar">Consultar</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="../cadastrarTarefa">Tarefa</a>
+                    </li>
                 </ul>
             </div>
         </div>
