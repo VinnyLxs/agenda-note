@@ -1,6 +1,6 @@
 <x-layout title="" >
 <div>
-    <form action="/salvar" method="GET">
+    <form action="/salvar" method="post">
         @csrf  
         <div class="container text-center">
             <div class="row align-items-center">
@@ -13,11 +13,11 @@
                              <p class="card-text">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label" >Cadastrar Tarefa</label>
-                                        <input type="cadastrar" class="form-control" id="cadastrar" name="cadastrar" aria-describedby="emailHelp" required>
+                                        <input type="cadastrar" class="form-control" id="nomeTarefa" name="nomeTarefa" aria-describedby="emailHelp" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleInputPassword1" class="form-label" >Descrição</label>
-                                        <input type="Text" class="form-control" id="tarefa" name="tarefa" required>
+                                        <input type="Text" class="form-control" id="descTarefa" name="descTarefa" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="data_hora">Data e Hora:</label>

@@ -19,7 +19,7 @@ class cadastrar extends Controller
         $nomeUsuario     = $request->input('nome');
         $telefoneUsuario = $request->input('telefone');
         
-        $model = new cadastrarUsuarioModel();
+        $model = new cadastrarModel();
         $model->nome = $nomeUsuario;
         $model->telefone = $telefoneUsuario;
         $model->save();
@@ -29,28 +29,28 @@ class cadastrar extends Controller
 
     public function consultar()
     {
-        $ids = cadastrarUsuarioModel::all();
+        $ids = cadastrarModel::all();
 
         return view('paginas.consultar', compact('ids'));
     }
 
     public function editar($id)
     {
-        $dado = cadastrarUsuarioModel::findOrFail($id);
+        $dado = cadastrarModel::findOrFail($id);
 
         return view('paginas.editar', compact('dado'));
     }
 
     public function atualizar(Request $request, $id)
     {
-        cadastrarUsuarioModel::where('id',$id)->update($request->all());
+        cadastrarModel::where('id',$id)->update($request->all());
 
         return redirect('consultar');
     }
 
     public function excluir(Request $request, $id)
     {
-        cadastrarUsuarioModel::where('id',$id)->delete($request->all());
+        cadastrarModel::where('id',$id)->delete($request->all());
 
         return redirect('consultar');
     }

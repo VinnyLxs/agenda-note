@@ -7,7 +7,8 @@ use App\Models\cadastrarUsuarioModel;//Importar a classe que eu quero utilizar
 
 class cadastrarUsuario extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $dados = cadastrarUsuarioModel::all();
 
         return view('paginas.cadastrar', compact('dados'));
@@ -21,12 +22,12 @@ class cadastrarUsuario extends Controller
 
 
     public function store(Request $request){
-        $cadastrarTarefa = $request->input('cadastrar');
-        $tarefa = $request->input('tarefa');
+        $cadastrarTarefa = $request->input('nomeTarefa');
+        $descTarefa = $request->input('descTarefa');
 
         $model = new cadastrarUsuarioModel();
         $model->cadastrar = $cadastrarTarefa;
-        $model->tarefa = $tarefa;
+        $model->tarefa = $descTarefa;
         $model->data_hora = $request->input('data_hora');
         $model->save();//Armazenar dados
 
@@ -36,5 +37,5 @@ class cadastrarUsuario extends Controller
         $dados = cadastrarUsuarioModel::all();
      
         return view('paginas.consultar', compact('dados'));
-      }
+    }
 }

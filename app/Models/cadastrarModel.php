@@ -9,5 +9,5 @@ class cadastrarModel extends Model
 {
     use HasFactory;
 
-    protected $table = 'tarefas';
+    protected $table = 'usuarios';
 }
