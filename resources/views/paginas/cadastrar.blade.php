@@ -17,7 +17,7 @@
 
                 <div class="card text-bg-dark p-3" style="max-width: 18rem;">
 
-                    <div class="card-header">Cadastrar Tarefa</div>
+                    <div class="card-header">Login</div>
 
                         <div class="card-body">
 
@@ -44,17 +44,16 @@
                             <a class="btn btn-primary" href="consultar">Consultar</a>
 
                         </p>
-
+                       
                     </div>
-
+                        
                 </div>
-
-                <div class="col">
-        
-                            </div>
+                
 
             </div>
-
+            <div class="col">
+ 
+             </div>
         </div>
 
         </div>

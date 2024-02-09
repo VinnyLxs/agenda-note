@@ -55,7 +55,4 @@ class cadastrar extends Controller
         return redirect('consultar');
     }
 
-
-  
-  
 }

@@ -1,6 +1,6 @@
 <x-layout title="" >
 <div>
-    <form action="/salvar" method="post">
+    <form action="/salvar" method="GET">
         @csrf  
         <div class="container text-center">
             <div class="row align-items-center">

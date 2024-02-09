@@ -22,11 +22,11 @@ class cadastrarUsuario extends Controller
 
 
     public function store(Request $request){
-        $cadastrarTarefa = $request->input('nomeTarefa');
+        $cadastrarTarefas = $request->input('nomeTarefa');
         $descTarefa = $request->input('descTarefa');
 
         $model = new cadastrarUsuarioModel();
-        $model->cadastrar = $cadastrarTarefa;
+        $model->cadastrar = $cadastrarTarefas;
         $model->tarefa = $descTarefa;
         $model->data_hora = $request->input('data_hora');
         $model->save();//Armazenar dados
